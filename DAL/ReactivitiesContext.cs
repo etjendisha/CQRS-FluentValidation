@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,7 @@ namespace DAL
         }
 
         public DbSet<Activity> Activities { get; set; }
+
+       
     }
 }
