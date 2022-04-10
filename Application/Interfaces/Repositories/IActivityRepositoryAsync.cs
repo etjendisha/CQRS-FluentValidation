@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.Interfaces.GenericRepository;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces.Repositories
 {
-    public interface IActivityRepositoryAsync : IGenericRepositoryAsync<Activity>
+    public interface IActivityRepositoryAsync : IGenericRepositoryAsync<Activity, Guid>
     {
-        Task<bool> IsUniqueBarcodeAsync(string barcode);
     }
 }

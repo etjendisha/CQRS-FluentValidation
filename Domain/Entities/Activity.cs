@@ -15,7 +15,7 @@ namespace Domain.Entities
         public string? Title { get; set; }
 
         [StringLength(300)]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [StringLength(300)]
         public string? Category { get; set; }
