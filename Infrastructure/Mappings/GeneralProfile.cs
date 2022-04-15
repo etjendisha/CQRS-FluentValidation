@@ -1,4 +1,6 @@
 ﻿using Application.DTOs.Activities;
+using Application.Features.Activities.Commands.CreateActivity;
+using Application.Features.Activities.Queries.GetAllActivities;
 using AutoMapper;
 using Domain.Entities;
 using System;
@@ -13,7 +15,12 @@ namespace Infrastructure.Mappings
     {
         public GeneralProfile()
         {
+            #region Activity
             CreateMap<Activity, CreateActivityCommand>().ReverseMap();
+
+            CreateMap<GetAllActivitiesQuery, GetAllActivitiesParameter>().ReverseMap();
+            CreateMap<Activity, GetAllActivitiesDto>().ReverseMap();
+            #endregion
         }
     }
 }

@@ -8,17 +8,17 @@ namespace Application.Common.Parameters
 {
     public class RequestParameter
     {
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
+        public int pageNumber { get; set; }
+        public int pageSize { get; set; }
         public RequestParameter()
         {
-            this.PageNumber = 1;
-            this.PageSize = 10;
+            this.pageNumber = 1;
+            this.pageSize = 10;
         }
         public RequestParameter(int pageNumber, int pageSize)
         {
-            this.PageNumber = pageNumber < 1 ? 1 : pageNumber;
-            this.PageSize = pageSize > 10 ? 10 : pageSize;
+            this.pageNumber = pageNumber < 1 ? 1 : pageNumber;
+            this.pageSize = pageSize > 10 ? 10 : pageSize;
         }
     }
 }

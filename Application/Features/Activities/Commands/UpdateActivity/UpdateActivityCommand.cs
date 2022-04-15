@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs.Activities
+namespace Application.Features.Activities.Commands.UpdateActivity
 {
     public class UpdateActivityCommand : IRequest<Response<Activity>>
     {
