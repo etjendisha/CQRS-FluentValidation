@@ -7,6 +7,7 @@ using Infrastructure;
 using Persistence;
 using Infrastructure.Middleware;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Infrastructure.Mailing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,13 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Reactivities", Version = "v1" });
 });
+
+#region Mail Settings
+var emailSettings = new MailSettings();
+builder.Configuration.GetSection("MailSettings").Bind(emailSettings);
+builder.Services.AddSingleton(emailSettings); 
+#endregion
+
 
 builder.Services.AddApplicationLayer();
 builder.Services.AddDataAccessLayer(builder.Configuration);

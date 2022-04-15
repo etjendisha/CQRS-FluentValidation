@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Activities.Commands
+namespace Application.Features.Activities.Commands.CreateActivity
 {
     public class CreateActivityCommandValidator : AbstractValidator<CreateActivityCommand>
     {

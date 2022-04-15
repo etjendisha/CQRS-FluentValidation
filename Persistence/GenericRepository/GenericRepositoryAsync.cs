@@ -80,7 +80,14 @@ namespace Persistence.GenericRepository
 
         public virtual void SetModified(TEntity entity) 
             => db.Entry(entity).State = EntityState.Modified;
- 
+
+        public async Task<TEntity> RemoveAsync(TEntity entity)
+        {
+            context.Remove(entity);
+
+            await db.SaveChangesAsync();
+            return entity;
+        }
     }
 }
 

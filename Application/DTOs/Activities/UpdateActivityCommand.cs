@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs.Activities
 {
-    public partial class CreateActivityCommand : IRequest<Response<Activity>>
+    public class UpdateActivityCommand : IRequest<Response<Activity>>
     {
+        public Guid Id { get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }
         public string? Category { get; set; }
         public string? City { get; set; }
         public string? Venue { get; set; }
-        public DateTime? Created { get; set; }
     }
 }

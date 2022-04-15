@@ -13,7 +13,6 @@ namespace Infrastructure.Mailing
     {
         public static IServiceCollection AddMailing(this IServiceCollection services, IConfiguration config)
         {
-            //services.Configure<MailSettings>(config.GetSection(nameof(MailSettings)));
             services.AddScoped<IEmailService, EmailService>();
             return services;
         }

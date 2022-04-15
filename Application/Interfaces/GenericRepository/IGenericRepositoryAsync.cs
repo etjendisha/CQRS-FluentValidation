@@ -14,6 +14,7 @@ namespace Application.Interfaces.GenericRepository
         Task<TEntity> GetByIdAsync(TKey id);
         Task<TEntity> AddAsync(TEntity entity);
         Task<TEntity> RemoveAsync(TKey id);
+        Task<TEntity> RemoveAsync(TEntity entity);
         Task<TEntity> UpdateAsync(TEntity entity);
         Task<IEnumerable<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> predicate);
